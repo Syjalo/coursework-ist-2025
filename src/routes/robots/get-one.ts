@@ -12,5 +12,5 @@ export async function getOne(request: FastifyRequest, reply: FastifyReply) {
 
 	if (!robot) return reply.code(404).send({ message: 'Unknown robot' });
 
-	reply.send(robot);
+	await reply.send(robot);
 }

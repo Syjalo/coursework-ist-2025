@@ -11,5 +11,5 @@ export async function create(request: FastifyRequest, reply: FastifyReply) {
 
 	if (!country) return reply.code(500).send({ message: 'Failed to create country' });
 
-	reply.code(201).send(country);
+	await reply.code(201).send(country);
 }

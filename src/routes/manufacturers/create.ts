@@ -11,5 +11,5 @@ export async function create(request: FastifyRequest, reply: FastifyReply) {
 
 	if (!manufacturer) return reply.code(500).send({ message: 'Failed to create manufacturer' });
 
-	reply.code(201).send(manufacturer);
+	await reply.code(201).send(manufacturer);
 }

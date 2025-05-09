@@ -12,5 +12,5 @@ export async function getOne(request: FastifyRequest, reply: FastifyReply) {
 
 	if (!manufacturer) return reply.code(404).send({ message: 'Unknown manufacturer' });
 
-	reply.send(manufacturer);
+	await reply.send(manufacturer);
 }

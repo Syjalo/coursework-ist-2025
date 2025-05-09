@@ -3,5 +3,5 @@ import { db, robotsTable } from '../../db';
 
 export async function getMany(_: FastifyRequest, reply: FastifyReply) {
 	const robots = await db.select().from(robotsTable);
-	reply.send(robots);
+	await reply.send(robots);
 }

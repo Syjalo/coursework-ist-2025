@@ -11,5 +11,5 @@ export async function create(request: FastifyRequest, reply: FastifyReply) {
 
 	if (!robot) return reply.code(500).send({ message: 'Failed to create robot' });
 
-	reply.code(201).send(robot);
+	await reply.code(201).send(robot);
 }

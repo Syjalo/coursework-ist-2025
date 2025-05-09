@@ -12,5 +12,5 @@ export async function getOne(request: FastifyRequest, reply: FastifyReply) {
 
 	if (!country) return reply.code(404).send({ message: 'Unknown country' });
 
-	reply.send(country);
+	await reply.send(country);
 }
