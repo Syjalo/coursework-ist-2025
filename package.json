@@ -1,0 +1,30 @@
+{
+  "name": "coursework-ist-2025",
+  "version": "0.0.0",
+  "description": "My coursework",
+  "main": "dist/index.js",
+  "scripts": {
+    "db:push": "drizzle-kit push",
+    "format": "pnpm dlx prettier ./src -w",
+    "fmt": "pnpm run format",
+    "start": "node --enable-source-maps .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Synbulat Biishev <me@syjalo.dev>",
+  "license": "MIT",
+  "dependencies": {
+    "@libsql/client": "^0.15.4",
+    "dotenv": "^16.5.0",
+    "drizzle-orm": "^0.43.1",
+    "drizzle-zod": "^0.7.1",
+    "fastify": "^5.3.2",
+    "fastify-zod": "^1.4.0",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@sapphire/ts-config": "^5.0.1",
+    "@types/node": "^22.15.17",
+    "drizzle-kit": "^0.31.1",
+    "typescript": "^5.8.3"
+  }
+}
